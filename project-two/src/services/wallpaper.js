@@ -22,7 +22,8 @@ const fetchWallpaper = async () => {
 
 const fetchRandomWallpaper = async () => {
   try {
-    const resp = await api(`curated?per_page=1&page=1`)
+    const rand = Math.random() * 100;
+    const resp = await api(`curated?per_page=1&page=${rand}`);
     return resp.data;
   } catch(e) {
     console.log('got a problem: ', e);

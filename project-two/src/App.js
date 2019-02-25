@@ -9,15 +9,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      wallpaper: {},
+      collection: {},
+      wallpapers: {},
       random: {}
     }
   }
 
   async getWallpapers() {
-    const wallpaper = await fetchWallpaper();
+    const wallpapers = await fetchWallpaper();
     this.setState({
-      wallpaper: wallpaper
+      wallpapers: wallpapers
     })
   }
 
@@ -34,10 +35,15 @@ class App extends Component {
   }
 
   render() {
+    const { collection, wallpapers, random } = this.state;
+
     return (
       <div className="App">
         <Header />
-        <Main />
+        <Main
+          collection={collection}
+          wallpapers={wallpapers}
+          random={random} />
         <Footer />
       </div>
     );
