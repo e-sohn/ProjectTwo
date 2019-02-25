@@ -3,12 +3,13 @@ import { Route } from "react-router-dom";
 import MyPhotos from './MyPhotos';
 import ChoosePhotos from './ChoosePhotos';
 import Random from './Random';
+import Home from './Home';
 
 const Main = (props) => {
   return (
     <div className='main'>
-
-      <Route exact path="/" />
+      
+      <Route exact path="/" render={Home} />
 
       <Route path="/myphotos" render={() => (
         <MyPhotos collection={props.collection} />
