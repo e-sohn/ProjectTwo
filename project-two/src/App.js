@@ -11,15 +11,12 @@ class App extends Component {
     this.state = {
       collection: {},
       wallpapers: {},
-      random: {}
+      random: {},
+      input: ''
     }
-  }
 
-  async getWallpapers() {
-    const wallpapers = await fetchWallpaper();
-    this.setState({
-      wallpapers: wallpapers
-    })
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   async getRandom() {
@@ -29,13 +26,29 @@ class App extends Component {
     })
   }
 
+  handleChange(ev) {
+    const { name, value } = ev.target;
+    this.setState({
+      [name]: value
+    })
+  }
+
+  async handleSubmit(ev) {
+    ev.preventDefault();
+    const topic = this.state.input;
+    const wallpapers = await fetchWallpaper(topic);
+    this.setState({
+      wallpapers: wallpapers
+    })
+  }
+
   componentDidMount() {
-    this.getWallpapers();
     this.getRandom();
   }
 
   render() {
-    const { collection, wallpapers, random } = this.state;
+    const { collection, wallpapers, random, input } = this.state;
+    const { handleChange, handleSubmit } = this;
 
     return (
       <div className="App">
@@ -43,7 +56,11 @@ class App extends Component {
         <Main
           collection={collection}
           wallpapers={wallpapers}
-          random={random} />
+          random={random}
+          input={input}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          />
         <Footer />
       </div>
     );

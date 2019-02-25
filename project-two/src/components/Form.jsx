@@ -1,9 +1,19 @@
 import React from 'react';
 
-const Form = () => {
+const Form = (props) => {
+
+  const { wallpapers, input, handleChange, handleSubmit } = props;
+
   return (
-    <form>
-      <input type='text' />
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        name='input'
+        value={input.value}
+        placeholder='What image type'
+        onChange={handleChange} />
+      <input
+        type='submit' />
     </form>
   )
 }
