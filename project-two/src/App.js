@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Link } from "react-router-dom";
 import { fetchWallpaper, fetchRandomWallpaper } from './services/wallpaper';
+import Main from './components/Main';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +34,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello
+        <Header />
+        <Main />
+        <Footer />
       </div>
     );
   }
