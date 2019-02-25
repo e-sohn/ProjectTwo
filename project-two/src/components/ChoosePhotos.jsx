@@ -2,8 +2,10 @@ import React from 'react';
 
 const ChoosePhotos = (props) => {
   return (
-    <div>
-      ChoosePhotos
+    <div className='choose-photos'>
+      <form>
+        <input type='text' />
+      </form>
     </div>
   )
 }

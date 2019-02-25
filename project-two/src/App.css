@@ -1,3 +1,26 @@
 * {
   text-align: center;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgba(0,255,255,.2);
+  color:  #17202a;
+}
+
+.footer {
+
 }

@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = (props) => {
   return (
-    <div>
-      Footer
+    <div className='footer'>
+      Photos provided by <a href='https://www.pexels.com/'>Pexels</a>
     </div>
   )
 }

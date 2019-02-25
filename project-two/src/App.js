@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      wallpaper: {}
+      wallpaper: {},
+      random: {}
     }
   }
 
@@ -23,12 +24,13 @@ class App extends Component {
   async getRandom() {
     const random = await fetchRandomWallpaper();
     this.setState({
-      wallpaper: random
+      random: random
     })
   }
 
   componentDidMount() {
     this.getWallpapers();
+    this.getRandom();
   }
 
   render() {

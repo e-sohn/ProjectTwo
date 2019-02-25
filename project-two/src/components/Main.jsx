@@ -6,8 +6,9 @@ import Random from './Random';
 
 const Main = (props) => {
   return (
-    <div>
-      <Route exact path="/myphotos" render={MyPhotos} />
+    <div className='main'>
+      <Route exact path="/" />
+      <Route path="/myphotos" render={MyPhotos} />
       <Route path="/choosephotos" render={ChoosePhotos} />
       <Route path="/random" render={Random} />
     </div>
