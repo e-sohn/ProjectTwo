@@ -27,7 +27,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getWallpapers();
-    this.getRandom();
   }
 
   render() {
