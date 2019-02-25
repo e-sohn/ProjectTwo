@@ -4,19 +4,19 @@ Facet is a wallpaper website that lets you pick pictures from the pexel api and 
 
 # React Component Hierarchy
 
-[Component Hierarchy](https://res.cloudinary.com/ssohny/image/upload/v1551103613/IMG_0847.jpg)
+[Component Hierarchy](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0847.jpg)
 
 ## Wireframe
 
-[Main](https://res.cloudinary.com/ssohny/image/upload/v1551103613/IMG_0846.jpg)
+[Main](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0846.jpg)
 
-[My Photos](https://res.cloudinary.com/ssohny/image/upload/v1551103613/IMG_0842.jpg)
+[My Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0842.jpg)
 
-[Choose Photos](https://res.cloudinary.com/ssohny/image/upload/v1551103613/IMG_0845.jpg)
+[Choose Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0845.jpg)
 
-[Random Photos](https://res.cloudinary.com/ssohny/image/upload/v1551103616/IMG_0844.jpg)
+[Random Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0844.jpg)
 
-[Profile](https://res.cloudinary.com/ssohny/image/upload/v1551103613/IMG_0843.jpg)
+[Profile](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0843.jpg)
 
 ## MVP EXAMPLE
 
