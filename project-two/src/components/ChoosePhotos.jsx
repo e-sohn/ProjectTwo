@@ -4,7 +4,7 @@ import Display from './Display';
 
 const ChoosePhotos = (props) => {
 
-  const { wallpapers, input, handleChange, handleSubmit } = props;
+  const { wallpapers, input, handleChange, handleSubmit, handleClick, handleSubmitPic } = props;
 
   return (
     <div className='choose-photos'>
@@ -18,9 +18,14 @@ const ChoosePhotos = (props) => {
         <div>
           {props.wallpapers.photos.map(wallpaper => (
             <div key={wallpaper.id}>
-              <Display wallpaper={wallpaper} />
+              <Display
+                wallpaper={wallpaper}
+                handleClick={handleClick} />
             </div>
           ))}
+          <form onSubmit={handleSubmitPic}>
+            <input type='submit' value='Add to my collection'/>
+          </form>
         </div>
       }
     </div>

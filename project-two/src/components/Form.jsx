@@ -2,7 +2,7 @@ import React from 'react';
 
 const Form = (props) => {
 
-  const { wallpapers, input, handleChange, handleSubmit } = props;
+  const { input, handleChange, handleSubmit } = props;
 
   return (
     <form onSubmit={handleSubmit}>

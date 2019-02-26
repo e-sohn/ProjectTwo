@@ -2,7 +2,7 @@ import React from 'react';
 
 const Display = (props) => {
 
-  const { wall, wallpaper } = props;
+  const { wall, wallpaper, handleClick } = props;
 
   return (
     <div>
@@ -11,12 +11,15 @@ const Display = (props) => {
           <img
             src={wall.src.landscape}
             alt='Picture from Pixel'
+            id={wall.id}
           />
           <div>Photo taken by {wall.photographer}</div>
         </div> : <div>
           <img
             src={wallpaper.src.medium}
             alt='Picture from Pixel'
+            onClick={handleClick}
+            id={wallpaper.id}
           />
           <div>Photo taken by {wallpaper.photographer}</div>
         </div>

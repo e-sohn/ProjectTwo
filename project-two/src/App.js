@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchWallpaper, fetchRandomWallpaper } from './services/wallpaper';
+import { fetchWallpaper, fetchRandomWallpaper, fetchFavorite } from './services/wallpaper';
 import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,17 +12,27 @@ class App extends Component {
       collection: {},
       wallpapers: {},
       random: {},
-      input: ''
+      input: '',
+      currentid: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmitPic = this.handleSubmitPic.bind(this);
   }
 
   async getRandom() {
     const random = await fetchRandomWallpaper();
     this.setState({
       random: random
+    })
+  }
+
+  handleClick(ev) {
+    const { id } = ev.target
+    this.setState({
+      currentid: id
     })
   }
 
@@ -42,13 +52,23 @@ class App extends Component {
     })
   }
 
+  async handleSubmitPic(ev) {
+    ev.preventDefault();
+    console.log('hello');
+    const currentid = this.state.currentid;
+    const favorite = await fetchFavorite(currentid);
+    this.setState({
+      collection: favorite
+    })
+  }
+
   componentDidMount() {
     this.getRandom();
   }
 
   render() {
     const { collection, wallpapers, random, input } = this.state;
-    const { handleChange, handleSubmit } = this;
+    const { handleChange, handleSubmit, handleClick, handleSubmitPic } = this;
 
     return (
       <div className="App">
@@ -60,6 +80,8 @@ class App extends Component {
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          handleClick={handleClick}
+          handleSubmitPic={handleSubmitPic}
           />
         <Footer />
       </div>
