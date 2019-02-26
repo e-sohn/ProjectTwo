@@ -31,18 +31,7 @@ const fetchRandomWallpaper = async () => {
   }
 }
 
-const fetchFavorite = async (id) => {
-  try {
-    const resp = await api(`photos/${id}`);
-    return resp.data;
-  } catch(e) {
-    console.log('got a problem: ', e);
-    return [];
-  }
-}
-
 export {
   fetchWallpaper,
-  fetchRandomWallpaper,
-  fetchFavorite
+  fetchRandomWallpaper
 };

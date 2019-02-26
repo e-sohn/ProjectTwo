@@ -1,9 +1,12 @@
 import React from 'react';
+import Display from './Display';
 
 const MyPhotos = (props) => {
+  const { collection, getFavorite } = props;
+
   return (
     <div>
-      MyPhoto
+      Hello
     </div>
   )
 }

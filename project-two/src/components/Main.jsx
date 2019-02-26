@@ -7,7 +7,7 @@ import Home from './Home';
 
 const Main = (props) => {
 
-  const { collection, wallpapers, input, handleChange, handleSubmit, handleClick, handleSubmitPic } = props;
+  const { collection, wallpapers, input, handleChange, handleSubmit, handleClick, handleSubmitPic, getFavorite } = props;
   const random = props.random.photos;
 
   return (

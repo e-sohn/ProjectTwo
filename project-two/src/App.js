@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchWallpaper, fetchRandomWallpaper, fetchFavorite } from './services/wallpaper';
+import { fetchWallpaper, fetchRandomWallpaper } from './services/wallpaper';
 import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -30,9 +30,11 @@ class App extends Component {
   }
 
   handleClick(ev) {
-    const { id } = ev.target
+    const id = ev.target.id;
+    let selected = this.state.wallpapers.photos.filter(wallpaper =>
+      wallpaper.id === Number(id))[0];
     this.setState({
-      currentid: id
+      currentid: selected
     })
   }
 
@@ -55,11 +57,10 @@ class App extends Component {
   async handleSubmitPic(ev) {
     ev.preventDefault();
     const currentid = this.state.currentid;
-    const favorite = await fetchFavorite(currentid);
     this.setState(prevState => ({
       collection: {
         ...prevState.collection,
-        [favorite.id]: favorite
+        [currentid.id]: currentid
       }
     }))
   }
@@ -70,7 +71,7 @@ class App extends Component {
 
   render() {
     const { collection, wallpapers, random, input } = this.state;
-    const { handleChange, handleSubmit, handleClick, handleSubmitPic } = this;
+    const { handleChange, handleSubmit, handleClick, handleSubmitPic, getFavorite } = this;
 
     return (
       <div className="App">
