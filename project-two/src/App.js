@@ -13,13 +13,15 @@ class App extends Component {
       wallpapers: {},
       random: {},
       input: '',
-      currentid: ''
+      currentid: {},
+      currentWallpaper: {}
     }
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmitPic = this.handleSubmitPic.bind(this);
+    this.handleSubmitWallpaper = this.handleSubmitWallpaper.bind(this);
   }
 
   async getRandom() {
@@ -54,7 +56,7 @@ class App extends Component {
     })
   }
 
-  async handleSubmitPic(ev) {
+  handleSubmitPic(ev) {
     ev.preventDefault();
     const currentid = this.state.currentid;
     this.setState(prevState => ({
@@ -65,13 +67,21 @@ class App extends Component {
     }))
   }
 
+  handleSubmitWallpaper(ev) {
+    ev.preventDefault();
+    const { currentid } = this.state;
+    this.setState({
+      currentWallpaper: currentid
+    })
+  }
+
   componentDidMount() {
     this.getRandom();
   }
 
   render() {
-    const { collection, wallpapers, random, input } = this.state;
-    const { handleChange, handleSubmit, handleClick, handleSubmitPic, getFavorite } = this;
+    const { collection, wallpapers, random, input, currentWallpaper } = this.state;
+    const { handleChange, handleSubmit, handleClick, handleSubmitPic, handleSubmitWallpaper } = this;
 
     return (
       <div className="App">
@@ -85,6 +95,7 @@ class App extends Component {
           handleSubmit={handleSubmit}
           handleClick={handleClick}
           handleSubmitPic={handleSubmitPic}
+          handleSubmitWallpaper={handleSubmitWallpaper}
           />
         <Footer />
       </div>
