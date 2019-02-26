@@ -54,12 +54,14 @@ class App extends Component {
 
   async handleSubmitPic(ev) {
     ev.preventDefault();
-    console.log('hello');
     const currentid = this.state.currentid;
     const favorite = await fetchFavorite(currentid);
-    this.setState({
-      collection: favorite
-    })
+    this.setState(prevState => ({
+      collection: {
+        ...prevState.collection,
+        [favorite.id]: favorite
+      }
+    }))
   }
 
   componentDidMount() {
