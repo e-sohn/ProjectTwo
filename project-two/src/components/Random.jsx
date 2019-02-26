@@ -1,15 +1,12 @@
 import React from 'react';
+import Display from './Display';
 
 const Random = (props) => {
   return (
     <div className='random'>
-      {props.random.photos !== undefined &&
+      {props.random !== undefined &&
         <div>
-          <img
-            src={props.random.photos[0].src.landscape}
-            alt='Picture from Pixel'
-            />
-          <div>Photo taken by {props.random.photos[0].photographer}</div>
+          <Display wall={props.random[0]}/>
         </div>
       }
     </div>

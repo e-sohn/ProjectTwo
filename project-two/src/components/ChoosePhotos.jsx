@@ -1,10 +1,11 @@
 import React from 'react';
 import Form from './Form';
+import Display from './Display';
 
 const ChoosePhotos = (props) => {
 
   const { wallpapers, input, handleChange, handleSubmit } = props;
-  
+
   return (
     <div className='choose-photos'>
       <Form
@@ -16,12 +17,8 @@ const ChoosePhotos = (props) => {
       {props.wallpapers.photos !== undefined &&
         <div>
           {props.wallpapers.photos.map(wallpaper => (
-            <div>
-              <img
-                src={wallpaper.src.medium}
-                alt='Picture from Pixel'
-                />
-              <div>Photo taken by {wallpaper.photographer}</div>
+            <div key={wallpaper.id}>
+              <Display wallpaper={wallpaper} />
             </div>
           ))}
         </div>
