@@ -75,6 +75,10 @@ class App extends Component {
     })
   }
 
+  styleImage() {
+    return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.large
+  }
+
   componentDidMount() {
     this.getRandom();
   }
@@ -82,9 +86,10 @@ class App extends Component {
   render() {
     const { collection, wallpapers, random, input, currentWallpaper } = this.state;
     const { handleChange, handleSubmit, handleClick, handleSubmitPic, handleSubmitWallpaper } = this;
+    const image = this.styleImage();
 
     return (
-      <div className="App">
+      <div className="App" style={{backgroundImage: `url(${image})`}}>
         <Header />
         <Main
           collection={collection}

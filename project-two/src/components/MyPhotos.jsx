@@ -13,9 +13,11 @@ const MyPhotos = (props) => {
             handleClick={handleClick} />
         </div>
       ))}
-      <form onSubmit={handleSubmitWallpaper}>
-        <input type='submit' value='Make Wallpaper'/>
-      </form>
+      {Object.keys(collection).length > 0 &&
+        <form onSubmit={handleSubmitWallpaper}>
+          <input type='submit' value='Make Wallpaper'/>
+        </form>
+      }
     </div>
   )
 }
