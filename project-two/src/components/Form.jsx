@@ -5,7 +5,7 @@ const Form = (props) => {
   const { input, handleChange, handleSubmit } = props;
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className='main-form' onSubmit={handleSubmit}>
       <input
         type='text'
         name='input'

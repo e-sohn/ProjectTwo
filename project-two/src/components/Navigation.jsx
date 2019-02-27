@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/myphotos'>My Photos</Link>
-      <Link to='/choosephotos'>Choose Photos</Link>
-      <Link to='/random'>Random Photo</Link>
+    <nav class="dropdown">
+      <button class="dropbtn">More</button>
+      <div class="dropdown-content">
+        <Link to='/'>Home</Link>
+        <Link to='/myphotos'>Mine</Link>
+        <Link to='/choosephotos'>Search</Link>
+        <Link to='/random'>Random</Link>
+      </div>
     </nav>
   )
 }
