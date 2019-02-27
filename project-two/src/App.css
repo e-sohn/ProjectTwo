@@ -4,6 +4,11 @@
   font-size: 30px;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -20,20 +25,29 @@ a:hover{
     text-shadow: 1px 0px 20px yellow;
 }
 
+.header {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #000000;
+  color:  #ffffff;
+  height: 50px;
+}
+
+.main {
+  margin-top: 30px;
+}
+
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: rgba(0,255,255,.2);
-  color:  #17202a;
-}
-
-.footer {
-
+#search {
+  border-radius: 5px;
+  padding: 20px;
+  text-align: left;
+  font-size: 20px;
 }

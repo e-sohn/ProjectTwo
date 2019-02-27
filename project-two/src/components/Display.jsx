@@ -6,14 +6,12 @@ const Display = (props) => {
 
   return (
     <div>
-       <div>
-        <img
-          src={wallpaper.src.medium}
-          onClick={handleClick}
-          id={wallpaper.id}
-        />
-        <div>Photo taken by {wallpaper.photographer}</div>
-      </div>
+      <img
+        src={wallpaper.src.medium}
+        onClick={handleClick}
+        id={wallpaper.id}
+        className='images' />
+      <div>Photo taken by {wallpaper.photographer}</div>
     </div>
   )
 }

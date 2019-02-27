@@ -9,11 +9,14 @@ const Form = (props) => {
       <input
         type='text'
         name='input'
+        id='search'
         value={input.value}
-        placeholder='What image type'
+        placeholder='Search photos'
         onChange={handleChange} />
       <input
-        type='submit' />
+        type='submit'
+        id='submit-search'
+        value='Search'/>
     </form>
   )
 }

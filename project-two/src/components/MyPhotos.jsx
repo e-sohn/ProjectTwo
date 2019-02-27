@@ -17,7 +17,7 @@ const MyPhotos = (props) => {
       ))}
       {Object.keys(collection).length > 0 &&
         <form onSubmit={handleSubmitWallpaper}>
-          <input type='submit' value='Make Wallpaper'/>
+          <input type='submit' value='Set Wallpaper'/>
         </form>
       }
     </div>

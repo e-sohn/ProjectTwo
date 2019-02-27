@@ -128,8 +128,8 @@ class App extends Component {
       backgroundImage: `url(${image})`,
       backgroundRepeat: `no-repeat`,
       backgroundPosition: `center`,
-      backgroundSize: '100% auto',
-      backgroundAttachment: 'fixed'
+      backgroundSize: 'cover',
+      backgroundAttachment: 'fixed',
     }
 
     return (

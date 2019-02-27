@@ -17,14 +17,14 @@ const ChoosePhotos = (props) => {
       {props.wallpapers.photos !== undefined &&
         <div>
           {props.wallpapers.photos.map(wallpaper => (
-            <div key={wallpaper.id}>
+            <section key={wallpaper.id}>
               <Display
                 wallpaper={wallpaper}
                 handleClick={handleClick} />
-            </div>
+            </section>
           ))}
           <form onSubmit={handleSubmitPic}>
-            <input type='submit' value='Add to my collection'/>
+            <input type='submit' value='Add to collection'/>
           </form>
         </div>
       }
