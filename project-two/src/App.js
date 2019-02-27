@@ -13,7 +13,7 @@ class App extends Component {
       wallpapers: {},
       random: {},
       input: '',
-      currentid: {},
+      currentPic: {},
       currentWallpaper: {}
     }
 
@@ -38,7 +38,7 @@ class App extends Component {
     let selected = this.state.wallpapers.photos.filter(wallpaper =>
       wallpaper.id === Number(id))[0];
     this.setState({
-      currentid: selected
+      currentPic: selected
     })
   }
 
@@ -46,7 +46,7 @@ class App extends Component {
     const { id }= ev.target;
     let selected = this.state.collection[id];
     this.setState({
-      currentid: selected
+      currentPic: selected
     })
   }
 
@@ -68,11 +68,11 @@ class App extends Component {
 
   handleSubmitPic(ev) {
     ev.preventDefault();
-    const { currentid } = this.state;
+    const { currentPic } = this.state;
     this.setState(prevState => ({
       collection: {
         ...prevState.collection,
-        [currentid.id]: currentid
+        [currentPic.id]: currentPic
       }
     }))
   }
@@ -90,9 +90,9 @@ class App extends Component {
 
   handleSubmitWallpaper(ev) {
     ev.preventDefault();
-    const { currentid } = this.state;
+    const { currentPic } = this.state;
     this.setState({
-      currentWallpaper: currentid
+      currentWallpaper: currentPic
     })
   }
 
@@ -122,6 +122,10 @@ class App extends Component {
     const image = this.styleImage();
     const style = {
       backgroundImage: `url(${image})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundPosition: `center`,
+      backgroundSize: '100% auto',
+      backgroundAttachment: 'fixed'
     }
 
     return (
