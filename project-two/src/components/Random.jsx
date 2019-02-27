@@ -1,5 +1,5 @@
 import React from 'react';
-import Display from './Display';
+import DisplayRandom from './DisplayRandom';
 
 const Random = (props) => {
   const { handleSubmitRandom, random } = props;
@@ -8,7 +8,7 @@ const Random = (props) => {
     <div className='random'>
       {random !== undefined &&
         <div>
-          <Display wall={random[0]}/>
+          <DisplayRandom wallpaper={random[0]}/>
           <form onSubmit={handleSubmitRandom}>
             <input type='submit' value='Add to my collection' />
           </form>
