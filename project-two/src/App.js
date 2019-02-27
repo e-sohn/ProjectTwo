@@ -14,7 +14,11 @@ class App extends Component {
       random: {},
       input: '',
       currentPic: {},
-      currentWallpaper: {}
+      currentWallpaper: {
+        src: {
+          original: 'https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?cs=srgb&dl=adventure-alpine-climb-869258.jpg&fm=jpg'
+        }
+      }
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -97,7 +101,7 @@ class App extends Component {
   }
 
   styleImage() {
-    return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.large;
+    return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.original;
   }
 
   componentDidMount() {

@@ -7,7 +7,7 @@ const DisplayRandom = (props) => {
   return (
     <div>
       <img
-        src={wallpaper.src.landscape}
+        src={wallpaper.src.large}
         alt='Picture from Pixel'
         id={wallpaper.id}
       />
