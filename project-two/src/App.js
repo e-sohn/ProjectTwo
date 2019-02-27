@@ -22,6 +22,8 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmitPic = this.handleSubmitPic.bind(this);
     this.handleSubmitWallpaper = this.handleSubmitWallpaper.bind(this);
+    this.handleSubmitRandom = this.handleSubmitRandom.bind(this);
+    this.handleClickCollection = this.handleClickCollection.bind(this);
   }
 
   async getRandom() {
@@ -32,9 +34,17 @@ class App extends Component {
   }
 
   handleClick(ev) {
-    const id = ev.target.id;
+    const { id } = ev.target;
     let selected = this.state.wallpapers.photos.filter(wallpaper =>
       wallpaper.id === Number(id))[0];
+    this.setState({
+      currentid: selected
+    })
+  }
+
+  handleClickCollection(ev) {
+    const { id }= ev.target;
+    let selected = this.state.collection[id];
     this.setState({
       currentid: selected
     })
@@ -58,11 +68,22 @@ class App extends Component {
 
   handleSubmitPic(ev) {
     ev.preventDefault();
-    const currentid = this.state.currentid;
+    const { currentid } = this.state;
     this.setState(prevState => ({
       collection: {
         ...prevState.collection,
         [currentid.id]: currentid
+      }
+    }))
+  }
+
+  handleSubmitRandom(ev) {
+    ev.preventDefault();
+    const random = this.state.random.photos[0];
+    this.setState(prevState => ({
+      collection: {
+        ...prevState.collection,
+        [random.id]: random
       }
     }))
   }
@@ -76,7 +97,7 @@ class App extends Component {
   }
 
   styleImage() {
-    return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.large
+    return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.large;
   }
 
   componentDidMount() {
@@ -84,12 +105,27 @@ class App extends Component {
   }
 
   render() {
-    const { collection, wallpapers, random, input, currentWallpaper } = this.state;
-    const { handleChange, handleSubmit, handleClick, handleSubmitPic, handleSubmitWallpaper } = this;
+    const {
+      collection,
+      wallpapers,
+      random,
+      input,
+      currentWallpaper } = this.state;
+    const {
+      handleChange,
+      handleSubmit,
+      handleClick,
+      handleClickCollection,
+      handleSubmitPic,
+      handleSubmitWallpaper,
+      handleSubmitRandom } = this;
     const image = this.styleImage();
+    const style = {
+      backgroundImage: `url(${image})`,
+    }
 
     return (
-      <div className="App" style={{backgroundImage: `url(${image})`}}>
+      <div className="App" style={style}>
         <Header />
         <Main
           collection={collection}
@@ -99,8 +135,10 @@ class App extends Component {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           handleClick={handleClick}
+          handleClickCollection={handleClickCollection}
           handleSubmitPic={handleSubmitPic}
           handleSubmitWallpaper={handleSubmitWallpaper}
+          handleSubmitRandom={handleSubmitRandom}
           />
         <Footer />
       </div>

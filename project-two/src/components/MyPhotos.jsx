@@ -1,16 +1,18 @@
 import React from 'react';
-import Display from './Display';
+import DisplayMyPhotos from './DisplayMyPhotos';
 
 const MyPhotos = (props) => {
-  const { collection, handleClick, handleSubmitWallpaper } = props;
+  const { collection,
+    handleSubmitWallpaper,
+    handleClickCollection } = props;
 
   return (
     <div>
       {Object.values(collection).map(wallpaper => (
         <div key={wallpaper.id}>
-          <Display
+          <DisplayMyPhotos
             wallpaper={wallpaper}
-            handleClick={handleClick} />
+            handleClickCollection={handleClickCollection} />
         </div>
       ))}
       {Object.keys(collection).length > 0 &&

@@ -17,7 +17,6 @@ const Display = (props) => {
         </div> : <div>
           <img
             src={wallpaper.src.medium}
-            alt='Picture from Pixel'
             onClick={handleClick}
             id={wallpaper.id}
           />

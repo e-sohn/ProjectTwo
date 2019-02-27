@@ -7,7 +7,16 @@ import Home from './Home';
 
 const Main = (props) => {
 
-  const { collection, wallpapers, input, handleChange, handleSubmit, handleClick, handleSubmitPic, handleSubmitWallpaper } = props;
+  const { collection,
+    wallpapers,
+    input,
+    handleChange,
+    handleSubmit,
+    handleClick,
+    handleClickCollection,
+    handleSubmitPic,
+    handleSubmitWallpaper,
+    handleSubmitRandom } = props;
   const random = props.random.photos;
 
   return (
@@ -18,7 +27,7 @@ const Main = (props) => {
       <Route path="/myphotos" render={() => (
         <MyPhotos
           collection={collection}
-          handleClick={handleClick}
+          handleClickCollection={handleClickCollection}
           handleSubmitWallpaper={handleSubmitWallpaper}
           />
         )} />
@@ -35,7 +44,10 @@ const Main = (props) => {
         )} />
 
       <Route path="/random" render={() => (
-        <Random random={random} />
+        <Random
+          random={random}
+          handleSubmitRandom={handleSubmitRandom}
+          />
         )} />
 
     </div>
