@@ -8,6 +8,10 @@ body > #root > div {
   min-height: 100vh;
 }
 
+img {
+  max-width: 90vw
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -34,6 +38,7 @@ body > #root > div {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   background-color: rgba(0, 0, 0, .5);
   flex-grow: 1;
 }
