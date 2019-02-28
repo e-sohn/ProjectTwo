@@ -15,6 +15,7 @@ const MyPhotos = (props) => {
             handleClickCollection={handleClickCollection} />
         </div>
       ))}
+
       {Object.keys(collection).length > 0 &&
         <form onSubmit={handleSubmitWallpaper}>
           <input type='submit' value='Set Wallpaper'/>
