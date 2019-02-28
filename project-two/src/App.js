@@ -17,7 +17,8 @@ class App extends Component {
       currentWallpaper: {
         src: {
           original: 'https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?cs=srgb&dl=adventure-alpine-climb-869258.jpg&fm=jpg'
-        }
+        },
+        photographer: 'Flo Maderebner'
       }
     }
 
@@ -113,7 +114,8 @@ class App extends Component {
       collection,
       wallpapers,
       random,
-      input } = this.state;
+      input,
+      currentWallpaper } = this.state;
     const {
       handleChange,
       handleSubmit,
@@ -147,7 +149,7 @@ class App extends Component {
           handleSubmitWallpaper={handleSubmitWallpaper}
           handleSubmitRandom={handleSubmitRandom}
           />
-        <Footer />
+        <Footer currentWallpaper={currentWallpaper} />
       </div>
     );
   }

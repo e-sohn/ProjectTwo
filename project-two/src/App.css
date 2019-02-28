@@ -1,7 +1,7 @@
 * {
   text-align: center;
   font-family: 'Indie Flower', cursive;
-  font-size: 30px;
+  font-size: 5vh;
 }
 
 body > #root > div {
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .copyright {
-  font-size: 15px;
+  font-size: 3vh;
   color: #FFFFFF;
 }
 
@@ -111,6 +111,10 @@ a:hover {
   display: block;
 }
 
+.credit {
+  font-size: 3vh;
+}
+
 #search {
   height: 8px;
   border-radius: 2px;
@@ -119,10 +123,9 @@ a:hover {
   text-align: left;
   font-size: 18px;
   margin: 0 10px 0 0;
+  width: 50vw;
 }
 
 #submit-search {
-  border-radius: 5px;
-  text-align: center;
-  font-size: 20px;
+  display: none;
 }
