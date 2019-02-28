@@ -5,13 +5,14 @@ const Display = (props) => {
   const { wallpaper, handleClick } = props;
 
   return (
-    <div>
+    <div className='wrapper'>
       <img
         src={wallpaper.src.medium}
         onClick={handleClick}
         id={wallpaper.id}
+        alt={`Number ${wallpaper.id}`}
         className='images' />
-      <div>Photo taken by {wallpaper.photographer}</div>
+      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
     </div>
   )
 }

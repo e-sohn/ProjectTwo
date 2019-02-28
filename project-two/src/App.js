@@ -113,8 +113,7 @@ class App extends Component {
       collection,
       wallpapers,
       random,
-      input,
-      currentWallpaper } = this.state;
+      input } = this.state;
     const {
       handleChange,
       handleSubmit,

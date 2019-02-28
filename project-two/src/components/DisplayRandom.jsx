@@ -5,13 +5,13 @@ const DisplayRandom = (props) => {
   const { wallpaper } = props;
 
   return (
-    <div>
+    <div className='wrapper'>
       <img
         src={wallpaper.src.large}
-        alt='Picture from Pixel'
+        alt={`Number ${wallpaper.id}`}
         id={wallpaper.id}
       />
-      <div>Photo taken by {wallpaper.photographer}</div>
+      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => {
   return (
     <div>
-      <h1>WELCOME TO FACET</h1>
+      <h1>Welcome to Facet</h1>
     </div>
   )
 }

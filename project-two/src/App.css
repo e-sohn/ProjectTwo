@@ -9,7 +9,12 @@ body > #root > div {
 }
 
 img {
-  max-width: 90vw
+  max-width: 80vw
+}
+
+a {
+  color: #C0C0C0;
+  text-decoration: none;
 }
 
 .App {
@@ -46,15 +51,14 @@ img {
 .dropbtn {
   margin: 0;
   background-color: #000000;
-  color: white;
+  color: #C0C0C0;
   padding: 2px;
   font-size: 30px;
   border: none;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
+.dropbtn:hover {
+  color: #FFFFFF;
 }
 
 .dropdown-content {
@@ -64,16 +68,18 @@ img {
 }
 
 .dropdown-content a {
-  color: white;
+  color: #C0C0C0;
   padding: 10px;
   text-decoration: none;
   display: block;
 }
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-a:hover{
-    text-shadow: 1px 0px 20px yellow;
+a:hover {
+  color: #FFFFFF;
 }
 
 .copyright {
@@ -85,12 +91,27 @@ a:hover{
   margin-bottom: 30px;
 }
 
+.photographer {
+  text-align: left;
+  position: relative;
+  bottom: 60px;
+  left: 0px;
+  visibility: hidden;
+}
+
+.wrapper:hover .photographer {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, .1));
+  color: white;
+  visibility:visible;
+}
+
 #search {
   height: 8px;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 2px;
+  border: none;
+  padding: 20px 15px;
   text-align: left;
-  font-size: 20px;
+  font-size: 18px;
   margin: 0 10px 0 0;
 }
 

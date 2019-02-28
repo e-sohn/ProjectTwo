@@ -4,13 +4,14 @@ const DisplayMyPhotos = (props) => {
   const { wallpaper, handleClickCollection } = props;
 
   return (
-    <div>
+    <div className='wrapper'>
       <img
         src={wallpaper.src.medium}
         onClick={handleClickCollection}
         id={wallpaper.id}
+        alt={`Number ${wallpaper.id}`}
       />
-      <div>Photo taken by {wallpaper.photographer}</div>
+      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
     </div>
   )
 }
