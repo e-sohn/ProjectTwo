@@ -24,34 +24,15 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleClick = this.handleClick.bind(this);
     this.handleSubmitPic = this.handleSubmitPic.bind(this);
     this.handleSubmitWallpaper = this.handleSubmitWallpaper.bind(this);
     this.handleSubmitRandom = this.handleSubmitRandom.bind(this);
-    this.handleClickCollection = this.handleClickCollection.bind(this);
   }
 
   async getRandom() {
     const random = await fetchRandomWallpaper();
     this.setState({
       random: random
-    })
-  }
-
-  handleClick(ev) {
-    const { id } = ev.target;
-    let selected = this.state.wallpapers.photos.filter(wallpaper =>
-      wallpaper.id === Number(id))[0];
-    this.setState({
-      currentPic: selected
-    })
-  }
-
-  handleClickCollection(ev) {
-    const { id }= ev.target;
-    let selected = this.state.collection[id];
-    this.setState({
-      currentPic: selected
     })
   }
 
@@ -73,11 +54,13 @@ class App extends Component {
 
   handleSubmitPic(ev) {
     ev.preventDefault();
-    const { currentPic } = this.state;
+    const { id } = ev.target;
+    let selected = this.state.wallpapers.photos.filter(wallpaper =>
+      wallpaper.id === Number(id))[0];
     this.setState(prevState => ({
       collection: {
         ...prevState.collection,
-        [currentPic.id]: currentPic
+        [selected.id]: selected
       }
     }))
   }
@@ -95,9 +78,10 @@ class App extends Component {
 
   handleSubmitWallpaper(ev) {
     ev.preventDefault();
-    const { currentPic } = this.state;
+    const { id }= ev.target;
+    let selected = this.state.collection[id];
     this.setState({
-      currentWallpaper: currentPic
+      currentWallpaper: selected
     })
   }
 
@@ -119,8 +103,6 @@ class App extends Component {
     const {
       handleChange,
       handleSubmit,
-      handleClick,
-      handleClickCollection,
       handleSubmitPic,
       handleSubmitWallpaper,
       handleSubmitRandom } = this;
@@ -143,8 +125,6 @@ class App extends Component {
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          handleClick={handleClick}
-          handleClickCollection={handleClickCollection}
           handleSubmitPic={handleSubmitPic}
           handleSubmitWallpaper={handleSubmitWallpaper}
           handleSubmitRandom={handleSubmitRandom}

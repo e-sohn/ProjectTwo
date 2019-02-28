@@ -4,7 +4,7 @@ import Display from './Display';
 
 const ChoosePhotos = (props) => {
 
-  const { wallpapers, input, handleChange, handleSubmit, handleClick, handleSubmitPic } = props;
+  const { wallpapers, input, handleChange, handleSubmit, handleSubmitPic } = props;
 
   return (
     <div className='choose-photos'>
@@ -20,7 +20,6 @@ const ChoosePhotos = (props) => {
             <section key={wallpaper.id}>
               <Display
                 wallpaper={wallpaper}
-                handleClick={handleClick}
                 handleSubmitPic={handleSubmitPic} />
             </section>
           ))}

@@ -71,6 +71,7 @@ a {
   padding: 10px;
   text-decoration: none;
   display: block;
+  font-size: 4vh;
 }
 
 .dropdown:hover .dropdown-content {
@@ -124,9 +125,9 @@ a:hover {
 }
 
 .save {
-  width: 10vh;
-  height: 3vh;
-  font-size: 2vh;
+  width: 7vh;
+  height: 2.5vh;
+  font-size: 1.5vh;
   text-align: center;
   vertical-align: center;
 }
