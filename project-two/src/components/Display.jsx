@@ -12,7 +12,7 @@ const Display = (props) => {
         id={wallpaper.id}
         alt={`Number ${wallpaper.id}`}
         className='images' />
-      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
+      <span className='photographer'>Photo taken by {wallpaper.photographer}</span>
     </div>
   )
 }

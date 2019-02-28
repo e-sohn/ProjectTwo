@@ -11,7 +11,7 @@ const DisplayMyPhotos = (props) => {
         id={wallpaper.id}
         alt={`Number ${wallpaper.id}`}
       />
-      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
+      <span className='photographer'>Photo taken by {wallpaper.photographer}</span>
     </div>
   )
 }

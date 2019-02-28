@@ -11,7 +11,7 @@ const DisplayRandom = (props) => {
         alt={`Number ${wallpaper.id}`}
         id={wallpaper.id}
       />
-      <div className='photographer'>Photo taken by {wallpaper.photographer}</div>
+      <span className='photographer'>Photo taken by {wallpaper.photographer}</span>
     </div>
   )
 }
