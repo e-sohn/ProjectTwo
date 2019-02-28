@@ -2,7 +2,7 @@ import React from 'react';
 
 const DisplayRandom = (props) => {
 
-  const { wallpaper } = props;
+  const { wallpaper, handleSubmitRandom } = props;
 
   return (
     <div className='wrapper'>
@@ -11,8 +11,12 @@ const DisplayRandom = (props) => {
         alt={`Number ${wallpaper.id}`}
         id={wallpaper.id}
       />
-      <span className='photographer'>{wallpaper.photographer}</span>
-
+      <span className='info'>
+        <span className='photographer'>{wallpaper.photographer}</span>
+        <form onSubmit={handleSubmitRandom}>
+          <input className='save' type='submit' value='Save' />
+        </form>
+      </span>
     </div>
   )
 }

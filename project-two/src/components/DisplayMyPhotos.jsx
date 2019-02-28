@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DisplayMyPhotos = (props) => {
-  const { wallpaper, handleClickCollection } = props;
+  const { wallpaper, handleClickCollection, handleSubmitWallpaper } = props;
 
   return (
     <div className='wrapper'>
@@ -11,7 +11,12 @@ const DisplayMyPhotos = (props) => {
         id={wallpaper.id}
         alt={`Number ${wallpaper.id}`}
       />
-      <span className='photographer'>{wallpaper.photographer}</span>
+      <span className='info'>
+        <span className='photographer'>{wallpaper.photographer}</span>
+        <form onSubmit={handleSubmitWallpaper}>
+          <input className='save' type='submit' value='Set'/>
+        </form>
+      </span>
     </div>
   )
 }

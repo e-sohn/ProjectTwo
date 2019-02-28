@@ -8,10 +8,9 @@ const Random = (props) => {
     <div className='random'>
       {random !== undefined &&
         <div>
-          <DisplayRandom wallpaper={random[0]}/>
-          <form onSubmit={handleSubmitRandom}>
-            <input type='submit' value='Add to my collection' />
-          </form>
+          <DisplayRandom
+            wallpaper={random[0]}
+            handleSubmitRandom={handleSubmitRandom} />
         </div>
       }
     </div>

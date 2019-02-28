@@ -40,12 +40,10 @@ a {
 }
 
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
   background-color: rgba(0, 0, 0, .5);
   flex-grow: 1;
+  color: #FFFFFF;
 }
 
 .dropbtn {
@@ -92,29 +90,45 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.copyright {
+  font-size: 2vh;
+}
+
+.credit {
+  font-size: 2vh;
+}
+
 .wrapper {
   display: inline-block;
   position: relative;
 }
 
-.photographer {
+.info {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  font-size: 3vh;
-  text-align: left;
 }
 
-.wrapper:hover .photographer {
+.wrapper:hover .info {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
   color: white;
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.credit {
+.photographer {
   font-size: 3vh;
+}
+
+.save {
+  width: 10vh;
+  height: 3vh;
+  font-size: 2vh;
+  text-align: center;
+  vertical-align: center;
 }
 
 #search {
@@ -130,4 +144,9 @@ a:hover {
 
 #submit-search {
   display: none;
+}
+
+#website {
+  font-size: 2vh;
+  color: #FFFFFF;
 }

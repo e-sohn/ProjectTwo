@@ -20,12 +20,10 @@ const ChoosePhotos = (props) => {
             <section key={wallpaper.id}>
               <Display
                 wallpaper={wallpaper}
-                handleClick={handleClick} />
+                handleClick={handleClick}
+                handleSubmitPic={handleSubmitPic} />
             </section>
           ))}
-          <form onSubmit={handleSubmitPic}>
-            <input type='submit' value='Add to collection'/>
-          </form>
         </div>
       }
     </div>
