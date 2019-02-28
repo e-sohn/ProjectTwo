@@ -12,7 +12,7 @@ const api = axios.create({
 
 const fetchWallpaper = async (topic) => {
   try {
-    const resp = await api(`search?query=${topic}&per_page=15&page=1`)
+    const resp = await api(`search?query=${topic}&per_page=100&page=1`)
     return resp.data;
   } catch(e) {
     console.log('got a problem: ', e);

@@ -9,7 +9,7 @@ body > #root > div {
 }
 
 img {
-  width: 80vw
+  max-width: 80vw
 }
 
 a {

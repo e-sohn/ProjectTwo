@@ -14,12 +14,7 @@ class App extends Component {
       random: {},
       input: '',
       currentPic: {},
-      currentWallpaper: {
-        src: {
-          original: 'https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?cs=srgb&dl=adventure-alpine-climb-869258.jpg&fm=jpg'
-        },
-        photographer: 'Flo Maderebner'
-      }
+      currentWallpaper: {}
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -32,7 +27,8 @@ class App extends Component {
   async getRandom() {
     const random = await fetchRandomWallpaper();
     this.setState({
-      random: random
+      random: random,
+      currentWallpaper: random.photos[0]
     })
   }
 
