@@ -9,7 +9,7 @@ body > #root > div {
 }
 
 img {
-  max-width: 80vw
+  width: 80vw
 }
 
 a {
@@ -113,7 +113,7 @@ a:hover {
 }
 
 .wrapper:hover .info {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
   color: white;
   display: flex;
   justify-content: space-around;
@@ -130,6 +130,10 @@ a:hover {
   font-size: 1.5vh;
   text-align: center;
   vertical-align: center;
+}
+
+.random-photo {
+  max-width: 80vw;
 }
 
 #search {
@@ -150,4 +154,43 @@ a:hover {
 #website {
   font-size: 2vh;
   color: #FFFFFF;
+}
+
+@media screen and (min-width: 600px) {
+  .images {
+    width: 45vw;
+  }
+  section {
+    width: 50vw;
+  }
+  .all-photos {
+    column-count: 2;
+    column-gap: 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .images {
+    width: 30vw;
+  }
+  section {
+    width: 33vw;
+  }
+  .all-photos {
+    column-count: 3;
+    column-gap: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .images {
+    width: 23vw;
+  }
+  section {
+    width: 25vw;
+  }
+  .all-photos {
+    column-count: 4;
+    column-gap: 0;
+  }
 }

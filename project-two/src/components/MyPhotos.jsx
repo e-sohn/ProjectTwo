@@ -6,7 +6,7 @@ const MyPhotos = (props) => {
     handleSubmitWallpaper } = props;
 
   return (
-    <div>
+    <div className='all-photos'>
       {Object.values(collection).map(wallpaper => (
         <div key={wallpaper.id}>
           <DisplayMyPhotos

@@ -8,6 +8,7 @@ const DisplayMyPhotos = (props) => {
       <img
         src={wallpaper.src.medium}
         alt={`Number ${wallpaper.id}`}
+        className='images'
       />
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>

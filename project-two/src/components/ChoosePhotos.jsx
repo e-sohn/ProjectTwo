@@ -4,7 +4,11 @@ import Display from './Display';
 
 const ChoosePhotos = (props) => {
 
-  const { wallpapers, input, handleChange, handleSubmit, handleSubmitPic } = props;
+  const { wallpapers,
+    input,
+    handleChange,
+    handleSubmit,
+    handleSubmitPic } = props;
 
   return (
     <div className='choose-photos'>
@@ -15,9 +19,10 @@ const ChoosePhotos = (props) => {
         handleSubmit={handleSubmit}
       />
       {props.wallpapers.photos !== undefined &&
-        <div>
+        <div className='all-photos'>
           {props.wallpapers.photos.map(wallpaper => (
-            <section key={wallpaper.id}>
+            <section
+              key={wallpaper.id}>
               <Display
                 wallpaper={wallpaper}
                 handleSubmitPic={handleSubmitPic} />
