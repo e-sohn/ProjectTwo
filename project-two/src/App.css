@@ -9,7 +9,9 @@ body > #root > div {
 }
 
 img {
-  max-width: 80vw
+  max-width: 80vw;
+  box-shadow: 5px 5px 3px #000000;
+  border-radius: 5px;
 }
 
 a {
@@ -112,6 +114,7 @@ a:hover {
 .info {
   display: none;
   position: absolute;
+  padding-top: 5px;
   top: 0;
   left: 0;
   right: 0;
@@ -127,11 +130,6 @@ a:hover {
 
 .photographer {
   font-size: 3vh;
-}
-
-.save {
-  font-size: 1.5vh;
-  border: 0;
 }
 
 .random {
