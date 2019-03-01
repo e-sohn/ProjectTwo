@@ -2,23 +2,25 @@
 
 Facet is a wallpaper website that lets you pick pictures from the pexel api and add them to your own collection of wallpapers. In the website, you will be able search for the type of background that you want and set them as the background to your own site.
 
-# React Component Hierarchy
+## User Story
 
-[Component Hierarchy](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0847.jpg)
+## Component Hierarchy
+
+![Component Hierarchy](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0847.jpg)
 
 ## Wireframe
 
-[Main](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0846.jpg)
+![Main](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0846.jpg)
 
-[My Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0842.jpg)
+![My Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0842.jpg)
 
-[Choose Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0845.jpg)
+![Choose Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0845.jpg)
 
-[Random Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0844.jpg)
+![Random Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0844.jpg)
 
-[Profile](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0843.jpg)
+![Profile](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0843.jpg)
 
-## MVP EXAMPLE
+## MVP
 
 - Find and use pexel API
 - Render list of 30 pictures on the page
@@ -31,18 +33,17 @@ Facet is a wallpaper website that lets you pick pictures from the pexel api and 
 - Able to add to collection of user photos
 - Display random photo where user can add to own collection
 
-## PostMVP EXAMPLE
+## PostMVP
 
-- Add user authentication
 - User can input size of the photo
 - Next or previous photo when on random page
 - Able to choose multiple photos on choose photo page
 - Delete multiple photos on my photos page
 - Profile page
-
-## Helper Functions
+- Add user authentication
 
 ## Libraries
+CSS, React.js
 
 ## Code Snippet
 
