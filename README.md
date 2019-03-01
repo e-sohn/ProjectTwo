@@ -1,8 +1,10 @@
 # Facet
 
-Facet is a wallpaper website that lets you pick pictures from the pexel api and add them to your own collection of wallpapers. In the website, you will be able search for the type of background that you want and set them as the background to your own site.
+Facet is a wallpaper website that lets users pick pictures from the pexel api and add them to their own collection of wallpapers. In the website, you will be able search for a type of picture and set the picture as the background of the website.
 
 ## User Story
+
+Users can navigate to one of three pages; Personal page which shows personal collection of user photos, search page where users can search for photos, and random which shows a random picture. Users have the ability to add pictures into their personal collection after they search for a particular image, then set that picture as the wallpaper of the website.
 
 ## Component Hierarchy
 
@@ -18,36 +20,47 @@ Facet is a wallpaper website that lets you pick pictures from the pexel api and 
 
 ![Random Photos](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0844.jpg)
 
-![Profile](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0843.jpg)
-
 ## MVP
 
-- Find and use pexel API
-- Render list of 30 pictures on the page
+- Use pexel API to get random photos and also get photos based on user query.
+- Render list of 100 pictures on the page
 - Allow user to choose picture and submit which pictures are added to personal collection
-- Show users own collection of pictures
+- Show users their own collection of pictures
 - Change background of website when user chooses from collection of pictures
-- Able to delete picture (one at a time)
-- Accepts user input for type of photo
-- Show collection of pictures based on user input
+- Give user ability to search for photo
+- Display collection of pictures based on user input
 - Able to add to collection of user photos
 - Display random photo where user can add to own collection
 
 ## PostMVP
 
-- User can input size of the photo
+- Able to delete picture
+- User can search based on original size of photo
 - Next or previous photo when on random page
-- Able to choose multiple photos on choose photo page
-- Delete multiple photos on my photos page
-- Profile page
 - Add user authentication
 
-## Libraries
+## Technologies Used
 CSS, React.js
 
 ## Code Snippet
+```
+styleImage() {
+  return (Object.keys(this.state.currentWallpaper).length === 0) ? 'none' : this.state.currentWallpaper.src.original;
+}
 
-## Issues and Resolutions
-
-ERROR: app.js:34 Uncaught SyntaxError: Unexpected identifier
-RESOLUTION: Missing comma after first object in sources {} object
+render() {
+  const image = this.styleImage();
+  const style = {
+    backgroundImage: `url(${image})`,
+    backgroundRepeat: `no-repeat`,
+    backgroundPosition: `center`,
+    backgroundSize: 'cover',
+    backgroundAttachment: 'fixed',
+  }
+  return (
+    <div className="App" style={style}>
+    </div>
+  )
+}
+```
+The code above explains how I was able to change the wallpaper of the website with inline styling. First I used a ternary statement outside of render to check whether my currentWallpaper state contained the object with info about my wallpaper. If there was a valid object, it returned the url of the original picture. I then set a variable called image to the returned value. I created another object with backgroundImage property with a value of the image and additional styling of the background. Then I set the style attribute of the entire app as the object I just created.

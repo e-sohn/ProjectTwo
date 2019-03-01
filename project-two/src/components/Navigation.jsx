@@ -7,7 +7,7 @@ const Navigation = () => {
       <button className="dropbtn">More</button>
       <div className="dropdown-content">
         <Link to='/'>Home</Link>
-        <Link to='/myphotos'>Mine</Link>
+        <Link to='/myphotos'>Personal</Link>
         <Link to='/choosephotos'>Search</Link>
         <Link to='/random'>Random</Link>
       </div>
