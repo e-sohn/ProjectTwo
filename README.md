@@ -6,6 +6,9 @@ Facet is a wallpaper website that lets users pick pictures from the pexel api an
 
 Users can navigate to one of three pages; Personal page which shows personal collection of user photos, search page where users can search for photos, and random which shows a random picture. Users have the ability to add pictures into their personal collection after they search for a particular image, then set that picture as the wallpaper of the website.
 
+## Link to Website
+[Link](facet.surge.sh)
+
 ## Component Hierarchy
 
 ![Component Hierarchy](https://res.cloudinary.com/ssohny/image/upload/v1551105769/IMG_0847.jpg)
