@@ -50,7 +50,7 @@ class App extends Component {
 
   handleSubmitPic(ev) {
     ev.preventDefault();
-    const { id } = ev.target;
+    const { id } = ev.currentTarget;
     let selected = this.state.wallpapers.photos.filter(wallpaper =>
       wallpaper.id === Number(id))[0];
     this.setState(prevState => ({
@@ -74,7 +74,7 @@ class App extends Component {
 
   handleSubmitWallpaper(ev) {
     ev.preventDefault();
-    const { id }= ev.target;
+    const { id }= ev.currentTarget;
     let selected = this.state.collection[id];
     this.setState({
       currentWallpaper: selected

@@ -130,13 +130,8 @@ a:hover {
 }
 
 .save {
-  /* width: 7vh; */
-  /* height: 2.5vh; */
   font-size: 1.5vh;
-  background: red;
   border: 0;
-  text-align: center;
-  /* vertical-align: center; */
 }
 
 .random {

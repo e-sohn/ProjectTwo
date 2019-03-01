@@ -13,9 +13,9 @@ const Display = (props) => {
         className='images' />
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>
-        <form id={wallpaper.id} onSubmit={handleSubmitPic}>
-          <input className='save' type='submit' value='Save'/>
-        </form>
+        <div id={wallpaper.id}
+          onClick={handleSubmitPic}
+          className='save'><i className="far fa-heart"></i></div>
       </span>
     </div>
   )

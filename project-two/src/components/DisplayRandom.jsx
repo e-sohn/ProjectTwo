@@ -13,9 +13,8 @@ const DisplayRandom = (props) => {
       />
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>
-        <form onSubmit={handleSubmitRandom}>
-          <input className='save' type='submit' value='Save' />
-        </form>
+        <div onClick={handleSubmitRandom}
+          className='save'><i className="far fa-heart"></i></div>
       </span>
     </div>
   )

@@ -12,9 +12,9 @@ const DisplayMyPhotos = (props) => {
       />
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>
-        <form id={wallpaper.id} onSubmit={handleSubmitWallpaper}>
-          <input className='save' type='submit' value='Set'/>
-        </form>
+        <div id={wallpaper.id}
+          onClick={handleSubmitWallpaper}
+          className='save'><i class="fas fa-plus"></i></div>
       </span>
     </div>
   )
