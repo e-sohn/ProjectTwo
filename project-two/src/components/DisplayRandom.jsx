@@ -2,7 +2,7 @@ import React from 'react';
 
 const DisplayRandom = (props) => {
 
-  const { wallpaper, handleSubmitRandom } = props;
+  const { wallpaper, handleClickRandom } = props;
 
   return (
     <div className='wrapper'>
@@ -13,7 +13,7 @@ const DisplayRandom = (props) => {
       />
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>
-        <div onClick={handleSubmitRandom}
+        <div onClick={handleClickRandom}
           className='save'><i className="far fa-heart"></i></div>
       </span>
     </div>

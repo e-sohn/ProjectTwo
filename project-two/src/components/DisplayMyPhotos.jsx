@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DisplayMyPhotos = (props) => {
-  const { wallpaper, handleSubmitWallpaper } = props;
+  const { wallpaper, handleClickWallpaper } = props;
 
   return (
     <div className='wrapper'>
@@ -13,7 +13,7 @@ const DisplayMyPhotos = (props) => {
       <span className='info'>
         <span className='photographer'>{wallpaper.photographer}</span>
         <div id={wallpaper.id}
-          onClick={handleSubmitWallpaper}
+          onClick={handleClickWallpaper}
           className='save'><i class="fas fa-plus"></i></div>
       </span>
     </div>

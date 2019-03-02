@@ -19,9 +19,9 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSubmitPic = this.handleSubmitPic.bind(this);
-    this.handleSubmitWallpaper = this.handleSubmitWallpaper.bind(this);
-    this.handleSubmitRandom = this.handleSubmitRandom.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleClickWallpaper = this.handleClickWallpaper.bind(this);
+    this.handleClickRandom = this.handleClickRandom.bind(this);
   }
 
   async getRandom() {
@@ -48,7 +48,7 @@ class App extends Component {
     })
   }
 
-  handleSubmitPic(ev) {
+  handleClick(ev) {
     ev.preventDefault();
     const { id } = ev.currentTarget;
     let selected = this.state.wallpapers.photos.filter(wallpaper =>
@@ -61,7 +61,7 @@ class App extends Component {
     }))
   }
 
-  handleSubmitRandom(ev) {
+  handleClickRandom(ev) {
     ev.preventDefault();
     const random = this.state.random.photos[0];
     this.setState(prevState => ({
@@ -72,7 +72,7 @@ class App extends Component {
     }))
   }
 
-  handleSubmitWallpaper(ev) {
+  handleClickWallpaper(ev) {
     ev.preventDefault();
     const { id }= ev.currentTarget;
     let selected = this.state.collection[id];
@@ -99,9 +99,9 @@ class App extends Component {
     const {
       handleChange,
       handleSubmit,
-      handleSubmitPic,
-      handleSubmitWallpaper,
-      handleSubmitRandom } = this;
+      handleClick,
+      handleClickWallpaper,
+      handleClickRandom } = this;
     const image = this.styleImage();
     const style = {
       backgroundImage: `url(${image})`,
@@ -121,9 +121,9 @@ class App extends Component {
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          handleSubmitPic={handleSubmitPic}
-          handleSubmitWallpaper={handleSubmitWallpaper}
-          handleSubmitRandom={handleSubmitRandom}
+          handleClick={handleClick}
+          handleClickWallpaper={handleClickWallpaper}
+          handleClickRandom={handleClickRandom}
           />
         <Footer currentWallpaper={currentWallpaper} />
       </div>

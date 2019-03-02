@@ -8,7 +8,7 @@ const ChoosePhotos = (props) => {
     input,
     handleChange,
     handleSubmit,
-    handleSubmitPic } = props;
+    handleClick } = props;
 
   return (
     <div className='choose-photos'>
@@ -25,7 +25,7 @@ const ChoosePhotos = (props) => {
               key={wallpaper.id}>
               <Display
                 wallpaper={wallpaper}
-                handleSubmitPic={handleSubmitPic} />
+                handleClick={handleClick} />
             </section>
           ))}
         </div>

@@ -12,9 +12,9 @@ const Main = (props) => {
     input,
     handleChange,
     handleSubmit,
-    handleSubmitPic,
-    handleSubmitWallpaper,
-    handleSubmitRandom } = props;
+    handleClick,
+    handleClickWallpaper,
+    handleClickRandom } = props;
   const random = props.random.photos;
 
   return (
@@ -25,7 +25,7 @@ const Main = (props) => {
       <Route path="/myphotos" render={() => (
         <MyPhotos
           collection={collection}
-          handleSubmitWallpaper={handleSubmitWallpaper}
+          handleClickWallpaper={handleClickWallpaper}
           />
         )} />
 
@@ -35,14 +35,14 @@ const Main = (props) => {
           input={input}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          handleSubmitPic={handleSubmitPic}
+          handleClick={handleClick}
           />
         )} />
 
       <Route path="/random" render={() => (
         <Random
           random={random}
-          handleSubmitRandom={handleSubmitRandom}
+          handleClickRandom={handleClickRandom}
           />
         )} />
 

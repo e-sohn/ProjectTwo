@@ -2,7 +2,7 @@ import React from 'react';
 import DisplayRandom from './DisplayRandom';
 
 const Random = (props) => {
-  const { handleSubmitRandom,
+  const { handleClickRandom,
     random } = props;
 
   return (
@@ -11,7 +11,7 @@ const Random = (props) => {
         <div>
           <DisplayRandom
             wallpaper={random[0]}
-            handleSubmitRandom={handleSubmitRandom} />
+            handleClickRandom={handleClickRandom} />
         </div>
       }
     </div>

@@ -3,7 +3,7 @@ import DisplayMyPhotos from './DisplayMyPhotos';
 
 const MyPhotos = (props) => {
   const { collection,
-    handleSubmitWallpaper } = props;
+    handleClickWallpaper } = props;
 
   return (
     <div className='all-photos'>
@@ -11,7 +11,7 @@ const MyPhotos = (props) => {
         <div key={wallpaper.id}>
           <DisplayMyPhotos
             wallpaper={wallpaper}
-            handleSubmitWallpaper={handleSubmitWallpaper} />
+            handleClickWallpaper={handleClickWallpaper} />
         </div>
       ))}
     </div>
